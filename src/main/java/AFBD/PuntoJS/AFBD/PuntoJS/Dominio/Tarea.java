@@ -14,7 +14,7 @@ import java.sql.Date;
 public class Tarea {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)
-    private int idTarea;
+    private Integer idTarea;
     private String descripcion;
     private String estado;
     private Date fechaLimite;

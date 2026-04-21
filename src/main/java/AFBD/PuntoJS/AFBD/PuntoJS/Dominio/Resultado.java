@@ -14,7 +14,7 @@ import java.sql.Date;
 public class Resultado {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)
-    private int idResultado;
+    private Integer idResultado;
     private float valor;
     private Date fecha;
     @ManyToOne

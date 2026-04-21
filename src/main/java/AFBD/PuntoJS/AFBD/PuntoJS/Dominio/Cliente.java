@@ -16,14 +16,14 @@ import java.util.List;
 public class Cliente {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)
-    private int idCliente;
+    private Integer idCliente;
     @Column(nullable = false)
     private String nombre;
     @Column(nullable = false, unique = true)
     private String email;
     private String telefono;
     private String empresa;
-    @OneToMany(mappedBy = "cliente")
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore
     private List<Campania> campanias;
 

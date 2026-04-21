@@ -17,7 +17,7 @@ import java.util.List;
 public class Campania {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)
-    private int idCampania;
+    private Integer idCampania;
     @Column(nullable = false)
     private String nombre;
     private String tipo;
@@ -31,7 +31,7 @@ public class Campania {
     @JsonIgnore
     private List<Tarea> tareas;
 
-    @OneToMany(mappedBy = "campania")
+    @OneToMany(mappedBy = "campania", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore
     private List<Resultado> resultados;
 }
