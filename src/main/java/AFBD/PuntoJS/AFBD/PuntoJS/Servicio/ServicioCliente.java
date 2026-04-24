@@ -18,10 +18,12 @@ public class ServicioCliente {
     }
     //Listar
     public List<Cliente> listar(){
+
         return repositorioCliente.findAll();
     }
     //Buscar por ID
     public Cliente buscarClientePorID(int id){
+
         return repositorioCliente.findById(id).orElse(null);
     }
     //Borrar por ID

@@ -5,7 +5,7 @@ import AFBD.PuntoJS.AFBD.PuntoJS.Repositorio.RepositorioCampania;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.xml.catalog.CatalogManager;
+
 import java.util.List;
 
 @Service
